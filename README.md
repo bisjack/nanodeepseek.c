@@ -20,26 +20,27 @@ The `kernel.py`,`configs` and `moe.py` is borrowed from [DeepSeek-V3](https://gi
 As simple as
 
 ```bash
-gcc moe.c -o moe -lm
+gcc model.c -o model -lm
 ```
 
 ## Verification
 
-Lowered the params to give my cpu a relief. Actually the tolerance of relative error is a bit intolerant... Wish I can figure it out later.
+Lowered the params to give my cpu a relief.
 
 ```bash
-python moe.py
+python model.py
 ```
 This will generate a bunch of txt files.
 
 ```bash
-./moe
+./model
 ```
 This will output something like this:
 
 ```
-moe forward took 0.867705 seconds to execute.
-passed
+Rate: 0.991974
+Rate: 0.997009
+Rate: 0.996307
 ```
 
 ## Future
